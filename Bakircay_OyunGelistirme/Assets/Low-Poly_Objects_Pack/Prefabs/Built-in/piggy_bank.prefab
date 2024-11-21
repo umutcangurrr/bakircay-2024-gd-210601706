@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6121393414528703523}
   m_Layer: 0
   m_Name: piggy_bank
-  m_TagString: Untagged
+  m_TagString: PiggyBank
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

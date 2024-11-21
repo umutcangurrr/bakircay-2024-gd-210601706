@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 2452740660262992565}
   m_Layer: 0
   m_Name: backpack
-  m_TagString: Untagged
+  m_TagString: Backpage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

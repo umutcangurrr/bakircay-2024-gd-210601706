@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3602877548507595379}
   m_Layer: 0
   m_Name: dynamite
-  m_TagString: Untagged
+  m_TagString: Dynamite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
