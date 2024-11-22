@@ -23,3 +23,7 @@ Nesneler seçildiğinde onlara kuvvet uygular.
 TouchManager.cs:
 Fare veya dokunmatik girdileri işleyen bir yönetim sistemi.
 Fare basma, sürükleme ve bırakma olaylarını algılar ve diğer scriptlere iletir.
+
+
+PROJE GÖSTERİMİ:
+https://youtu.be/gTZyBLM9Ufs
