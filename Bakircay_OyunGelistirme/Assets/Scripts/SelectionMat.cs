@@ -3,7 +3,7 @@ using UnityEngine;
 public class SelectionMat : MonoBehaviour
 {
     public SelectionMat otherMat;
-    public GameManager gameManager; // GameManager referansý
+    public GameManager gameManager; 
 
     private GameObject currentObject;
 
@@ -27,11 +27,11 @@ public class SelectionMat : MonoBehaviour
         {
             if (GetBaseName(currentObject.name) == GetBaseName(otherMat.currentObject.name))
             {
-                // Yok edilmeden önce GameManager'a bilgi ver
+                
                 gameManager.ObjectDestroyed();
                 gameManager.ObjectDestroyed();
 
-                // Nesneleri yok et
+                
                 Destroy(currentObject);
                 Destroy(otherMat.currentObject);
 

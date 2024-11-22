@@ -53,15 +53,15 @@ namespace Common
         {
             Vector2 mousePosition = Input.mousePosition;
 
-            if (Input.GetMouseButtonDown(0)) // Sol týklama baþlangýcý
+            if (Input.GetMouseButtonDown(0)) 
             {
                 MouseDown(mousePosition);
             }
-            else if (Input.GetMouseButton(0)) // Sol týklama sürdürme
+            else if (Input.GetMouseButton(0)) 
             {
                 MouseDrag(mousePosition);
             }
-            else if (Input.GetMouseButtonUp(0)) // Sol týklama býrakma
+            else if (Input.GetMouseButtonUp(0)) 
             {
                 MouseUp(mousePosition);
             }
