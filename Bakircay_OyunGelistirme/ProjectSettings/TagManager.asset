@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rake
+  - Backpage
+  - Bitcoin
+  - Bomb
+  - Bottle
+  - Bowl
+  - Crown
+  - Dice
+  - Dynamite
+  - FryingPan
+  - Hat
+  - Headphones
+  - Smiley
+  - PiggyBank
+  - Pot
   layers:
   - Default
   - TransparentFX
