@@ -1,37 +1,69 @@
 ### Meyve Eşleştirme Oyunu - README
-
-## Oyun Hakkında
-Bu oyun, oyuncuların meyve eşleştirmesi yaparak puan kazandığı bir oyun deneyimi sunar. Oyun içinde belirli skiller (Q, W, E) kullanarak oyunculara ekstra avantajlar sağlanır. Oyuncular, meyveleri doğru şekilde eşleştirerek ve çeşitli skilleri kullanarak yüksek puanlar elde etmeye çalışır.
+Oyun Hakkında
+Bu oyun, oyuncuların meyve eşleştirmesi yaparak puan kazandığı ve çeşitli butonlarla (skiller) ekstra avantajlar elde edebildiği bir oyun deneyimi sunar. Oyuncular, meyveleri doğru şekilde eşleştirerek ve farklı butonları (x2 Puan, Bonus Obje Yarat, Objeleri Tekrar Düşür) kullanarak yüksek puanlar elde etmeye çalışır.
 
 Temel Özellikler
-Meyve Eşleştirme: Oyuncular, kabın içine düşen meyveleri eşleştirerek puan toplar. Eğer iki meyve aynıysa, bu eşleşme geçerli olur ve oyuncuya puan kazandırır.
-Puan Sistemi: Eşleşen meyveler, oyuncuya puan kazandırır. Puanlar, meyve türüne göre değişir ve oyuncunun toplam puanı ekranda görüntülenir.
-UI Göstergeleri: Oyuncunun toplam puanı, ekranda bir TextMesh Pro UI öğesi ile gösterilir.
-Skiller
-Oyun içerisinde üç farklı skill bulunmaktadır: Q, W, ve E. Bu skiller, oyunculara farklı avantajlar sağlar ve belirli zaman dilimlerinde kullanılabilirler.
+Meyve Eşleştirme
 
-1. Q Skilli
-Ne Yapar: Q tuşuna basıldığında, "Q Skill" aktif olur ve oyuncunun puanları 2 katına çıkar. Bu skill 10 saniye boyunca geçerli olur.
-Kullanılabilirlik: Q skilli aktif olduğunda, Q UI görseli kaybolur. 10 saniye sonra skill sona erer ve 10 saniye daha beklenir, ardından Q tekrar kullanılabilir hale gelir.
-UI Görseli: Q skillini aktive etmek için ekranın köşesinde bir görsel bulunur. Skill aktif olduğunda, bu görsel kaybolur.
-2. W Skilli
-Ne Yapar: W tuşuna basıldığında, "Golden Apple" adlı özel bir meyve spawn edilir. Bu meyve, oyuncuya ekstra puan kazandırabilir.
-Kullanılabilirlik: W skilli 15 saniye boyunca devre dışı bırakılır ve bu süre zarfında W skillini tekrar kullanmak mümkün değildir. 15 saniye sonunda skill tekrar aktif olur ve UI görseli geri gelir.
-UI Görseli: W skillinin aktif olduğu anda bir UI görseli kaybolur ve 15 saniye sonunda geri gelir.
-3. E Skilli
-Ne Yapar: E tuşuna basıldığında, tüm meyvelerden 2 tane daha spawn edilir. Bu skill, 60 saniyede bir kullanılabilir.
-Kullanılabilirlik: E skilli aktif olduğunda, 60 saniye boyunca tekrar kullanılmaz. Skill sona erdiğinde, UI görseli kaybolur ve 60 saniye sonra geri gelir.
-UI Görseli: E skillini aktive etmek için ekranın köşesinde bir görsel bulunur. Skill aktif olduğunda, bu görsel kaybolur.
+Meyveler, bir “kaba” düştükçe eşleşmeye çalışır.
+Aynı harfle başlayan iki meyve eşleştiğinde, oyuncuya puan kazandırır.
+Puan Sistemi
+
+Eşleşen meyveler, türlerine (baş harflerine) göre farklı puan değerlerine sahiptir.
+Toplam puan, ekranda bir TextMesh Pro UI öğesi ile anlık olarak gösterilir.
+UI Göstergeleri
+
+Oyunun üst veya alt kısmında, toplam puan ve butonların (x2 Puan, Bonus Obje, Objeleri Tekrar Düşür) durumu bulunur.
+Butonlar (Skiller)
+Oyunda üç farklı buton vardır. Her biri belirli bir süre ve cooldown mantığına sahiptir.
+
+1. x2 Puan Butonu
+Ne Yapar:
+Bu butona bastığınızda, x2 Puan skilli devreye girer.
+10 saniye boyunca kazandığınız tüm puanlar iki katına çıkar.
+Kullanılabilirlik:
+10 saniyelik aktif süreden sonra skill biter ve 10 saniyelik bir bekleme (cooldown) devreye girer.
+Cooldown tamamlandığında buton tekrar görünür ve basılabilir hale gelir.
+UI Durumu:
+Skill aktif olduğunda, x2 Puan butonu gizlenir.
+Cooldown bittiğinde buton geri gelir.
+2. Bonus Obje Yarat Butonu
+Ne Yapar:
+Bu butona bastığınızda, oyuna “Lahana” adlı özel bir meyve eklenir.
+Lahana, yüksek puan potansiyeli sağlar.
+Kullanılabilirlik:
+Butona basıldıktan sonra, 15 saniye boyunca tekrar kullanılamaz.
+15 saniye sonunda buton yeniden görünür ve aktif hale gelir.
+UI Durumu:
+Butona basar basmaz buton kaybolur.
+15 saniye sonra tekrar ortaya çıkar.
+3. Objeleri Tekrar Düşür Butonu
+Ne Yapar:
+Bu butona bastığınızda, tüm meyvelerden 2’şer tane daha sahnede belirmiş olur.
+Böylece daha fazla eşleştirme şansı elde edersiniz.
+Kullanılabilirlik:
+Kullanıldıktan sonra, 60 saniyelik bir bekleme süresi başlar.
+Bu süre bitene kadar buton tekrar tıklanamaz.
+UI Durumu:
+Aktifleştirilir edilmez buton gizlenir.
+60 saniye sonunda yeniden görünür ve basılabilir hale gelir.
 Oyun Mekanikleri
-Meyve Ekleme: Meyveler, kabın içine düştükçe, oyuncu bu meyveleri eşleştirmeye çalışır. Aynı meyveler eşleştiğinde, oyuncuya puan kazandırılır.
-Farklı Harfler: Eğer iki meyve farklıysa, bu meyveler sabit bir pozisyona ışınlanır ve oyuncu bunları yeniden kullanamaz.
-Puan Kazanma: Eşleşen meyveler için puanlar toplanır ve toplam puan, ekranda güncellenir.
+Meyve Ekleme:
+Sahnede periyodik olarak veya butonlar sayesinde yeni meyveler spawn edilir.
+Kabın içine düşen meyveler, eşleşme bekler.
+Eşleşme Kuralları:
+İki meyve aynı harfle başlıyorsa, eşleşir ve belirli bir puan kazandırır.
+Farklı harfle başlıyorsa, ikisi de sabit bir pozisyona ışınlanarak pasifleştirilir.
+Puan Kazanma:
+Eşleşen meyveler, baş harfe göre puan ekler (A, B, C, vb.).
+x2 Puan butonu aktifken eşleşirseniz, puanlar iki kat yazılır.
 Kontroller
-Q Tuşu: Q skilli aktif eder ve puanları 2x yapar. 10 saniye boyunca geçerlidir.
-W Tuşu: W skilli aktif eder ve Golden Apple spawn eder. 15 saniye boyunca geçerlidir.
-E Tuşu: E skilli aktif eder ve tüm meyvelerden 2 tane daha spawn eder. 60 saniye bekleme süresi vardır.
-İpuçları
-Q, W ve E skillerini stratejik olarak kullanarak daha fazla puan kazanabilirsiniz. Özellikle Q ve E skilleri, doğru zamanda kullanıldığında yüksek puanlar kazandırabilir.
-Meyve eşleştirmelerini dikkatli yapın, çünkü aynı meyveler eşleştiğinde daha fazla puan kazanırsınız.
+x2 Puan Butonu: Ekrandaki bu butona basıldığında, 10 saniye boyunca 2 kat puan kazanma aktif olur.
+Bonus Obje Yarat Butonu: Bastığınızda, 15 saniyelik cooldown’a girer ve sahneye 2 adet Golden Apple eklenir.
+Objeleri Tekrar Düşür Butonu: Bastığınızda, meyvelerden 2’şer tane daha spawn edilmesini sağlar ve 60 saniyelik cooldown’a girer.
+(Oyun içerisinde klavye kullanımı kaldırıldı; artık tüm skilller bu UI butonları ile devreye girer.)
 
-Oyun Link: https://umutcangurrr.itch.io/matchgame
+İpuçları
+x2 Puan özelliğini, meyvelerin bolca eşleşeceği anlarda kullanmak en yüksek getiriyi sağlar.
+Bonus Obje olarak gelen Golden Apple, diğer meyvelerden daha değerli olabilir.
+Objeleri Tekrar Düşür butonunu, kabın içi boşalmaya başladığında veya hızlı puan artışı hedeflediğinizde kullanmak mantıklı olabilir.
